@@ -166,10 +166,7 @@
 							<mainClass>com.img.learn.app.SpringNativeApplication</mainClass>
 							<imageName>${project.artifactId}</imageName>
 							<buildArgs>
-								<buildArg>--no-fallback</buildArg>
-								<buildArg>-H:+ReportExceptionStackTraces</buildArg>
-								<buildArg>--trace-class-initialization=com.oracle.truffle.api.Truffle</buildArg>
-								<buildArg>--initialize-at-run-time=com.oracle.truffle.api.Truffle</buildArg>
+								<buildArg>--language:js</buildArg>
 							</buildArgs>
 						</configuration>
 						<executions>
