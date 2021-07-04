@@ -6,6 +6,9 @@ import com.img.learn.app.mapper.DtoEntityMapper;
 import java.util.Objects;
 import org.springframework.stereotype.Component;
 
+/**
+ * converter layer for {@link CustomerRequest} dto and {@link Customer} entity.
+ */
 @Component
 public class CustomerMapper implements DtoEntityMapper<CustomerRequest, Customer> {
 

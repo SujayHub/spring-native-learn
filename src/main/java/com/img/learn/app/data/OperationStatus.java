@@ -3,6 +3,9 @@ package com.img.learn.app.data;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+ * all possible operation statuses are listed here.
+ */
 @Getter
 @AllArgsConstructor
 public enum OperationStatus {

@@ -12,6 +12,12 @@ import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+/**
+ * The business logic implementations for CRUD operation of Customer resource.
+ *
+ * @see Customer
+ * @see CustomerService
+ */
 @Service
 @RequiredArgsConstructor
 public class CustomerServiceImpl implements CustomerService {
@@ -52,7 +58,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     if (Objects.nonNull(customerEntity)) {
       customerEntity.setName(customer.getName());
-      return customerRepo.save(customerEntity );
+      return customerRepo.save(customerEntity);
     }
 
     throw new CustomerServiceException(
@@ -62,7 +68,7 @@ public class CustomerServiceImpl implements CustomerService {
   }
 
   @Override
-  public void deleteCustomer(Integer customerId) throws CustomerServiceException {
+  public void deleteCustomer(final Integer customerId) throws CustomerServiceException {
     if (customerRepo.existsById(customerId)) {
       customerRepo.deleteById(customerId);
       return;

@@ -5,12 +5,21 @@ import com.img.learn.app.exception.CustomerServiceException;
 import java.util.Collection;
 import javax.validation.constraints.NotNull;
 
+/**
+ * The customer service interface provides services for
+ * creating, retrieving, updating and deleting customer resources.
+ *
+ */
 public interface CustomerService {
 
   void addCustomer(@NotNull Collection<String> customerNames);
+
   Collection<Customer> getAllCustomers();
+
   Customer getCustomer(@NotNull final Integer customerId) throws CustomerServiceException;
-  Customer updateCustomer(@NotNull final Customer customer, @NotNull final Integer customerId )
+
+  Customer updateCustomer(@NotNull final Customer customer, @NotNull final Integer customerId)
       throws CustomerServiceException;
+
   void deleteCustomer(@NotNull final Integer customerId) throws CustomerServiceException;
 }

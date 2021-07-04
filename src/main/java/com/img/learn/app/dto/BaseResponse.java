@@ -10,6 +10,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
+/**
+ * Standard response object definition.
+ */
 @Data
 @SuperBuilder
 @NoArgsConstructor
@@ -23,6 +26,9 @@ public class BaseResponse {
   private Collection<ErrorResponse> errors;
 
 
+  /**
+   * Standard error response object definition.
+   */
   @Data
   @Builder
   @AllArgsConstructor

@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Request body object definition for updating a customer.
+ */
 @Data
 @Builder
 @NoArgsConstructor

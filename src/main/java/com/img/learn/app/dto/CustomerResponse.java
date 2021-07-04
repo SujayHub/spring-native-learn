@@ -8,6 +8,10 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
+/**
+ * Standard object definition of response body for customer resource operations
+ * create read or update.
+ */
 @Data
 @SuperBuilder
 @AllArgsConstructor

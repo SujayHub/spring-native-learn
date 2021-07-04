@@ -11,9 +11,14 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+/**
+ * Global exception handlers are defined here
+ * for all service level exceptions.
+ */
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
-  private static final String SERVICE_RESPONSE_MESSAGE = "CUSTOMER_SERVICE_EXCEPTION_HAS_OCCURRED";
+  private static final String CUSTOMER_SERVICE_EXCEPTION_RESPONSE_MESSAGE =
+      "CUSTOMER_SERVICE_EXCEPTION_HAS_OCCURRED";
 
   @ExceptionHandler(value = {CustomerServiceException.class})
   protected ResponseEntity<BaseResponse> handleConflict(
@@ -23,7 +28,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         BaseResponse.builder()
             .operationStatus(ex.getOperationStatus())
             .responseCode(ex.getOperationStatus().getCode())
-            .responseMessage(SERVICE_RESPONSE_MESSAGE)
+            .responseMessage(CUSTOMER_SERVICE_EXCEPTION_RESPONSE_MESSAGE)
             .errors(
                 Collections.singleton(
                     ErrorResponse.builder()
