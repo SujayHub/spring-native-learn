@@ -45,10 +45,7 @@ public class CustomerServiceImpl implements CustomerService {
       return customer;
     }
 
-    throw new CustomerServiceException(
-        CUSTOMER_NOT_FOUND.getOperationStatus(),
-        CUSTOMER_NOT_FOUND.getErrorMessage(),
-        CUSTOMER_NOT_FOUND.getErrorCode());
+    throw new CustomerServiceException(CUSTOMER_NOT_FOUND);
   }
 
   @Override
@@ -61,10 +58,7 @@ public class CustomerServiceImpl implements CustomerService {
       return customerRepo.save(customerEntity);
     }
 
-    throw new CustomerServiceException(
-        CUSTOMER_NOT_FOUND.getOperationStatus(),
-        CUSTOMER_NOT_FOUND.getErrorMessage(),
-        CUSTOMER_NOT_FOUND.getErrorCode());
+    throw new CustomerServiceException(CUSTOMER_NOT_FOUND);
   }
 
   @Override
@@ -74,9 +68,6 @@ public class CustomerServiceImpl implements CustomerService {
       return;
     }
 
-    throw new CustomerServiceException(
-        CUSTOMER_NOT_FOUND.getOperationStatus(),
-        CUSTOMER_NOT_FOUND.getErrorMessage(),
-        CUSTOMER_NOT_FOUND.getErrorCode());
+    throw new CustomerServiceException(CUSTOMER_NOT_FOUND);
   }
 }
